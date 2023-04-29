@@ -1,1 +1,48 @@
-<p>cart works!</p>
+<div class="container">
+  <h4 class="page_title">Cart Page</h4>
+  <div class="cart">
+    <div class="cart_items">
+      <div class="cart_item" *ngFor="let cartItem of cart.items">
+        <a routerLink="/food/{{ cartItem.food.id }}" class="cart_item_data">
+          <!-- item image -->
+          <img
+            src="{{ cartItem.food.imageUrl }}"
+            alt="{{ cartItem.food.name }}"
+          />
+          <!-- name of food -->
+          <div class="food_name">{{ cartItem.food.name }}</div>
+        </a>
+        <!-- select quantity -->
+        <select
+          #selectedQuantity
+          [value]="cartItem.quantity"
+          (change)="changeItemQuantity(cartItem, selectedQuantity.value)"
+        >
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+        </select>
+        <!-- price -->
+        <span class="cart_item_price">{{ cartItem.price | currency }}</span>
+        <!-- remove icon -->
+        <div class="remove_icons" (click)="removeFromCart(cartItem)">
+          <fa-icon [icon]="faTrash"></fa-icon>
+        </div>
+      </div>
+    </div>
+    <!-- checkout -->
+    <div class="summary">
+      <ul>
+        <li>Item: {{ cart.totalCount }}</li>
+        <li class="cart_items_price">
+          Total: {{ cart.totalPrice | currency }}
+        </li>
+      </ul>
+      <button class="checkout_btn">Checkout</button>
+    </div>
+  </div>
+</div>
