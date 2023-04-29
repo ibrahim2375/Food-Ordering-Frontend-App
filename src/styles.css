@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:wght@300;400;600&family=Roboto+Mono:ital,wght@0,200;0,300;0,400;0,500;1,100&display=swap");
+
+:root {
+  --first-color: coral;
+  --second-color: white;
+  --third-color: #666;
+  --orgins-bg: #eeeded;
+  --origin-color: #ccc;
+  --font-color: black;
+  --search-border: #c0c0c0;
+  --tags-bg: #eeeded;
+  --price-color: rgb(51, 201, 51);
+}
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  /* general font style */
+  font-family: "Pacifico", cursive;
+  font-family: "Raleway", sans-serif;
+  font-family: "Roboto Mono", monospace;
+}
+
+/* general classes */
+
+.container {
+  margin: 0 auto;
+  padding: 20px 30px;
+}
+.favorite {
+  color: var(--first-color);
+}
+.not_favorite {
+  color: var(--third-color);
+}
