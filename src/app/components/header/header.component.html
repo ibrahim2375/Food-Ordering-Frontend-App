@@ -3,7 +3,13 @@
     <nav>
       <a routerLink="/" class="logo">LOGO</a>
       <ul>
-        <li>
+        <li
+          routerLinkActive="active_link"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a routerLink="/">Home</a>
+        </li>
+        <li routerLinkActive="active_link">
           <a routerLink="/login">login</a>
         </li>
         <li class="menu-container">
@@ -16,8 +22,10 @@
             </div>
           </div>
         </li>
-        <li>
-          <a routerLink="/cart" class="cart"> Cart <span class="cart_no">4</span> </a>
+        <li routerLinkActive="active_link">
+          <a routerLink="/cart" class="cart">
+            Cart <span class="cart_no">4</span>
+          </a>
         </li>
       </ul>
     </nav>

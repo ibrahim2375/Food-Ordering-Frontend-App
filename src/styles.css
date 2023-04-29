@@ -28,7 +28,9 @@
 }
 
 /* general classes */
-
+.active_link a{
+  background-color: var(--first-color);
+}
 .container {
   margin: 0 auto;
   padding: 20px 30px;
