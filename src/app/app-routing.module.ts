@@ -9,6 +9,7 @@ const routes: Routes = [
   {path:'search/:query',component:HomeComponent},
   {path:'tag/:tag',component:HomeComponent},
   {path:'food/:id',component:FoodComponent},
+  {path:'cart',component:FoodComponent},
   { path: '**', component: ErrorComponent }, //should be always last route path
 ];
 
