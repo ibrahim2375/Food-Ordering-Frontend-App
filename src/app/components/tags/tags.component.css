@@ -1,0 +1,18 @@
+.tags {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 20px 0;
+  overflow-x: scroll;
+}
+.tags .tag {
+  color: var(--font-color);
+  background-color: var(--tags-bg);
+  padding: 4px 5px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
