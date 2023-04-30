@@ -1,0 +1,50 @@
+<form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+  <div class="form_input">
+    <label for="email">Email</label>
+    <input
+      id="email"
+      type="email"
+      placeholder="email address"
+      formControlName="email"
+    />
+    <div
+      clsss="error_list"
+      *ngIf="
+        reactiveForm.get('email')?.touched && reactiveForm.get('email')?.invalid
+      "
+    >
+      <small *ngIf="reactiveForm.get('email')?.errors?.['email']"
+        >Not Vaild Email</small
+      >
+      <small *ngIf="reactiveForm.get('email')?.errors?.['required']"
+        >Email Cannot Be Empty</small
+      >
+    </div>
+  </div>
+  <div class="form_input">
+    <label for="password">Password</label>
+    <input
+      id="password"
+      type="password"
+      placeholder="password"
+      formControlName="password"
+    />
+    <div
+      clsss="error_list"
+      *ngIf="
+        reactiveForm.get('password')?.touched &&
+        reactiveForm.get('password')?.invalid
+      "
+    >
+      <small *ngIf="reactiveForm.get('password')?.errors?.['required']"
+        >Password Cannot Be Empty</small
+      >
+    </div>
+  </div>
+  <input
+    type="submit"
+    value="Submit"
+    id="btn"
+    [disabled]="!reactiveForm.valid"
+  />
+</form>

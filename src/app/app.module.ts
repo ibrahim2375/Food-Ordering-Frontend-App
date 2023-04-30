@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http'
-import { FormsModule } from '@angular/forms'
+import { FormsModule , ReactiveFormsModule } from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -15,6 +15,7 @@ import { FoodComponent } from './pages/food/food.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { NotFoundDataComponent } from './components/not-found-data/not-found-data.component';
 import { FoodsComponent } from './pages/foods/foods.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { FoodsComponent } from './pages/foods/foods.component';
     CartComponent,
     NotFoundDataComponent,
     FoodsComponent,
+    LoginComponent,
 
   ],
   imports: [
@@ -37,7 +39,7 @@ import { FoodsComponent } from './pages/foods/foods.component';
     RatingModule,
     HttpClientModule,
     FormsModule,
-
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

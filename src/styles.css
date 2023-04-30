@@ -41,3 +41,10 @@
 .not_favorite {
   color: var(--third-color);
 }
+/* forms */
+input.ng-invalid.ng-touched {
+  border: red 1px solid;
+}
+small {
+  color: red;
+}

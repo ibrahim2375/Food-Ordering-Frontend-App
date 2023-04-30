@@ -5,6 +5,7 @@ import { ErrorComponent } from './pages/error/error.component';
 import { FoodComponent } from './pages/food/food.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { FoodsComponent } from './pages/foods/foods.component';
+import { LoginComponent } from './pages/login/login.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path:'tag/:tag',component:FoodsComponent},
   {path:'food/:id',component:FoodComponent},
   {path:'cart',component:CartComponent},
+  {path:'login',component:LoginComponent},
   { path: '**', component: ErrorComponent }, //should be always last route path
 ];
 
