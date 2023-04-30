@@ -9,6 +9,10 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+nav .logo img {
+  object-fit: contain;
+  height: 30px;
+}
 nav ul {
   display: flex;
   align-items: center;

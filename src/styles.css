@@ -33,7 +33,7 @@
 }
 .container {
   margin: 0 auto;
-  padding: 20px 30px;
+  padding: 10px 30px;
 }
 .favorite {
   color: var(--first-color);
