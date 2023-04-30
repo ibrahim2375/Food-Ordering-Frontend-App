@@ -18,10 +18,10 @@ export class LoginComponent implements OnInit {
   }
   onSubmit() {
   if(this.reactiveForm.invalid) return;
-  alert(`
-  Email: ${this.reactiveForm.get('email')?.value} 
-  Pass: ${this.reactiveForm.get('password')?.value} 
-  `)
+    alert(`
+    Email: ${this.reactiveForm.get('email')?.value} 
+    Pass: ${this.reactiveForm.get('password')?.value} 
+    `)
 
   }
 }

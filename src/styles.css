@@ -11,6 +11,7 @@
   --search-border: #c0c0c0;
   --tags-bg: #eeeded;
   --price-color: rgb(51, 201, 51);
+  --input-border:#999;
 }
 
 * {
@@ -47,4 +48,5 @@ input.ng-invalid.ng-touched {
 }
 small {
   color: red;
+  font-size: 12px;
 }
