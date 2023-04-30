@@ -12,6 +12,8 @@ import { ErrorComponent } from './pages/error/error.component';
 import { TagsComponent } from './components/tags/tags.component';
 import { FoodComponent } from './pages/food/food.component';
 import { CartComponent } from './pages/cart/cart.component';
+import { NotFoundDataComponent } from './components/not-found-data/not-found-data.component';
+import { FoodsComponent } from './pages/foods/foods.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { CartComponent } from './pages/cart/cart.component';
     TagsComponent,
     FoodComponent,
     CartComponent,
+    NotFoundDataComponent,
+    FoodsComponent,
 
   ],
   imports: [
