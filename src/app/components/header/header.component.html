@@ -9,6 +9,12 @@
         >
           <a routerLink="/">Home</a>
         </li>
+        <li
+          routerLinkActive="active_link"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a routerLink="/foods">Foods</a>
+        </li>
         <li routerLinkActive="active_link">
           <a routerLink="/login">login</a>
         </li>
@@ -24,7 +30,7 @@
         </li>
         <li routerLinkActive="active_link">
           <a routerLink="/cart" class="cart">
-            Cart <span class="cart_no">4</span>
+            Cart <span class="cart_no">{{ cart.items.length }}</span>
           </a>
         </li>
       </ul>
