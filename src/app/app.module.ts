@@ -18,7 +18,7 @@ import { FoodsComponent } from './pages/foods/foods.component';
 import { LoginComponent } from './pages/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { ToastrModule } from 'ngx-toastr';
+// import { ToastrModule } from 'ngx-toastr';
 // import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
@@ -44,7 +44,7 @@ import { ToastrModule } from 'ngx-toastr';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    ToastrModule.forRoot(), // ToastrModule added,
+    // ToastrModule.forRoot(), // ToastrModule added,
   
   ],
   providers: [],
