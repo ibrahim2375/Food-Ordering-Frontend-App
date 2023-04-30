@@ -13,6 +13,7 @@ export class CartComponent implements OnInit {
  //icons
 faTrash = faTrash;
 cart!:Cart;
+quntityOptions:any = [1,2,3,4,5,6,7,8,9,10];
   constructor(private cartService: CartService) { }
 
   ngOnInit(): void {

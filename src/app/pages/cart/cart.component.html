@@ -1,6 +1,13 @@
 <div class="container">
   <h4 class="page_title">Cart Page</h4>
-  <div class="cart">
+  <!-- if not found data or any item in cart -->
+  <app-not-found-data
+    [visiable]="!cart || !cart.items.length"
+    message="Cart Is Empty"
+    linkText="Go To Find Food"
+  ></app-not-found-data>
+  <!-- cart data -->
+  <div *ngIf="cart.items.length" class="cart">
     <div class="cart_items">
       <div class="cart_item" *ngFor="let cartItem of cart.items">
         <a routerLink="/food/{{ cartItem.food.id }}" class="cart_item_data">
@@ -18,13 +25,7 @@
           [value]="cartItem.quantity"
           (change)="changeItemQuantity(cartItem, selectedQuantity.value)"
         >
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-          <option>6</option>
-          <option>7</option>
+          <option *ngFor="let quntityOption of quntityOptions">{{quntityOption}}</option>
         </select>
         <!-- price -->
         <span class="cart_item_price">{{ cartItem.price | currency }}</span>
