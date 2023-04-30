@@ -14,16 +14,16 @@ export class UserService {
   constructor(private http:HttpClient) {
     this.userObservable = this.userSubject.asObservable();
   }
-  login(userLogin: UserLogin):Observable<User> {
-    return this.http.post<User>(USER_LOGIN,userLogin).pipe(
+  login(userLogin:UserLogin):Observable<User>{
+    return this.http.post<User>(USER_LOGIN, userLogin).pipe(
       tap({
-        next:(user) => {
-          
-        },error:(error) => {
+        next: (user) =>{
+
+        },
+        error: (errorResponse) => {
 
         }
       })
-    )
-
+    );
   }
 }

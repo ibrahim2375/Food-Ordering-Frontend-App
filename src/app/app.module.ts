@@ -16,10 +16,9 @@ import { CartComponent } from './pages/cart/cart.component';
 import { NotFoundDataComponent } from './components/not-found-data/not-found-data.component';
 import { FoodsComponent } from './pages/foods/foods.component';
 import { LoginComponent } from './pages/login/login.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-// import { ToastrModule } from 'ngx-toastr';
-// import { ToastrModule } from 'ngx-toastr';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,15 +36,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
+    // BrowserAnimationsModule,
     AppRoutingModule,
     FontAwesomeModule,
     RatingModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    // ToastrModule.forRoot(), // ToastrModule added,
-  
+
   ],
   providers: [],
   bootstrap: [AppComponent]
