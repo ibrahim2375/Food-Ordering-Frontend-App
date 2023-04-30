@@ -1,11 +1,11 @@
 <div class="container">
   <!-- if not found data or any item in cart -->
   <app-not-found-data
-    [visiable]="!food.id"
+    [visiable]="!food"
     linkText="Go To Home Page"
   ></app-not-found-data>
   <!-- food data -->
-  <div *ngIf="food.id" class="food">
+  <div *ngIf="food" class="food">
     <div class="food_img">
       <img src="{{ food.imageUrl }}" alt="{{ food.name }}" />
     </div>
