@@ -12,6 +12,7 @@ import { UserRegister } from '../shared/interfaces/UserRegister';
 export class UserService {
   user_key = 'User';
   user!: User;
+  serverError!:string;
   private userSubject = new BehaviorSubject<User>(this.getUserFromLocalStorage());
   public userObservable:Observable<User>;
   constructor(private http:HttpClient) {
@@ -31,7 +32,8 @@ export class UserService {
           console.log(user + "logged in");
         },
         error: (errorResponse) => {
-          console.log(errorResponse);
+          console.log(errorResponse.error);
+          this.serverError = errorResponse.error;
         }
       })
     );

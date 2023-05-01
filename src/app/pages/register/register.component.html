@@ -1,5 +1,5 @@
 <div class="form_page">
-  <form>
+  <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
     <!-- user name -->
     <div class="form_input">
       <label for="username">Username</label>
@@ -7,9 +7,24 @@
         id="username"
         type="text"
         placeholder="username"
-  
+        formControlName="name"
       />
+      <!-- errors -->
+      <div
+        clsss="error_list"
+        *ngIf="
+          reactiveForm.get('name')?.touched && reactiveForm.get('name')?.invalid
+        "
+      >
+        <small *ngIf="reactiveForm.get('name')?.errors?.['required']">{{
+          errorsList.usernameRequired
+        }}</small>
+        <small *ngIf="reactiveForm.get('name')?.hasError('minlength')">{{
+          errorsList.usernameMinLength
+        }}</small>
+      </div>
     </div>
+
     <!-- user email -->
     <div class="form_input">
       <label for="email">Email</label>
@@ -17,8 +32,23 @@
         id="email"
         type="email"
         placeholder="email address"
-
+        formControlName="email"
       />
+      <!-- errors -->
+      <div
+        clsss="error_list"
+        *ngIf="
+          reactiveForm.get('email')?.touched &&
+          reactiveForm.get('email')?.invalid
+        "
+      >
+        <small *ngIf="reactiveForm.get('email')?.errors?.['required']">{{
+          errorsList.emailRequired
+        }}</small>
+        <small *ngIf="reactiveForm.get('email')?.errors?.['email']">{{
+          errorsList.vaildEmail
+        }}</small>
+      </div>
     </div>
     <!-- user address -->
     <div class="form_input">
@@ -27,8 +57,23 @@
         id="address"
         type="text"
         placeholder="build - street - city"
-
+        formControlName="address"
       />
+      <!-- errors -->
+      <div
+        clsss="error_list"
+        *ngIf="
+          reactiveForm.get('address')?.touched &&
+          reactiveForm.get('address')?.invalid
+        "
+      >
+        <small *ngIf="reactiveForm.get('address')?.errors?.['required']">{{
+          errorsList.addressRequired
+        }}</small>
+        <small *ngIf="reactiveForm.get('address')?.hasError('minlength')">{{
+          errorsList.addressMinLength
+        }}</small>
+      </div>
     </div>
     <!-- user password -->
     <div class="form_input">
@@ -37,8 +82,23 @@
         id="password"
         type="password"
         placeholder="password"
-  
+        formControlName="password"
       />
+      <!-- errors -->
+      <div
+        clsss="error_list"
+        *ngIf="
+          reactiveForm.get('password')?.touched &&
+          reactiveForm.get('password')?.invalid
+        "
+      >
+        <small *ngIf="reactiveForm.get('password')?.errors?.['required']">{{
+          errorsList.passwordRequired
+        }}</small>
+        <small *ngIf="reactiveForm.get('password')?.hasError('pattern')">{{
+          errorsList.passwordPattern
+        }}</small>
+      </div>
     </div>
     <!-- register btn -->
     <input type="submit" value="Register" />
