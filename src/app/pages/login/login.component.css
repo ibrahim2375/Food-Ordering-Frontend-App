@@ -49,3 +49,7 @@ form input[type="submit"]:hover {
   background-color: var(--second-color);
   color: var(--first-color);
 }
+form .register_link {
+  color: var(--first-color);
+  font-weight: bold;
+}

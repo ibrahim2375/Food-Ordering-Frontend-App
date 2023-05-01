@@ -22,10 +22,15 @@
         <!-- select quantity -->
         <select
           #selectedQuantity
-          [value]="cartItem.quantity"
           (change)="changeItemQuantity(cartItem, selectedQuantity.value)"
+          [value]="cartItem.quantity"
         >
-          <option *ngFor="let quntityOption of quntityOptions">{{quntityOption}}</option>
+          <option
+          *ngFor="let quntityOption of quntityOptions"
+          [value]="quntityOption"
+          >
+            {{ quntityOption }}
+          </option>
         </select>
         <!-- price -->
         <span class="cart_item_price">{{ cartItem.price | currency }}</span>

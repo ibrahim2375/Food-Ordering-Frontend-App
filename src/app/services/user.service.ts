@@ -3,7 +3,8 @@ import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { User } from '../shared/models/User';
 import { UserLogin } from '../shared/interfaces/UserLogin';
 import { HttpClient } from '@angular/common/http';
-import { USER_LOGIN } from '../shared/api/api';
+import { USER_LOGIN, USER_REGISTER } from '../shared/api/api';
+import { UserRegister } from '../shared/interfaces/UserRegister';
 
 @Injectable({
   providedIn: 'root'
@@ -20,13 +21,14 @@ export class UserService {
       this.user = newuser;
     })
   }
+  //login method
   login(userLogin:UserLogin):Observable<User> {
     return this.http.post<User>(USER_LOGIN, userLogin).pipe(
       tap({
         next: (user) => {
           this.setUserToLocalStorage(user);
           this.userSubject.next(user);
-          console.log(user.email + "logged in");
+          console.log(user + "logged in");
         },
         error: (errorResponse) => {
           console.log(errorResponse);
@@ -34,6 +36,22 @@ export class UserService {
       })
     );
   }
+  //register method
+    register(userRegister:UserRegister):Observable<User> {
+    return this.http.post<User>(USER_REGISTER, userRegister).pipe(
+      tap({
+        next: (user) => {
+          this.setUserToLocalStorage(user);
+          this.userSubject.next(user);
+          console.log(user.email + "registerd successfully");
+        },
+        error: (errorResponse) => {
+          console.log(errorResponse);
+        }
+      })
+    );
+  }
+  //logout method
   logout() {
     this.userSubject.next(new User());
     localStorage.removeItem(this.user_key);

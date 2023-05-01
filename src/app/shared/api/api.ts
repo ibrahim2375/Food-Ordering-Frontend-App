@@ -9,3 +9,4 @@ export const FOOD_TAGS = `${API}/api/foods/tags`;
 export const FOODS_BY_TAG = `${API}/api/foods/tag/`;
 // users
 export const USER_LOGIN = `${API}/api/users/login`;
+export const USER_REGISTER= `${API}/api/users/register`;

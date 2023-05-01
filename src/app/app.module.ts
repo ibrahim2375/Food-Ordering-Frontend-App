@@ -16,6 +16,7 @@ import { CartComponent } from './pages/cart/cart.component';
 import { NotFoundDataComponent } from './components/not-found-data/not-found-data.component';
 import { FoodsComponent } from './pages/foods/foods.component';
 import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -32,6 +33,7 @@ import { LoginComponent } from './pages/login/login.component';
     NotFoundDataComponent,
     FoodsComponent,
     LoginComponent,
+    RegisterComponent,
 
   ],
   imports: [

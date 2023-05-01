@@ -6,6 +6,7 @@ import { FoodComponent } from './pages/food/food.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { FoodsComponent } from './pages/foods/foods.component';
 import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
 //services
 import { LoginGuardService } from './services/login-guard.service';
 
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path:'food/:id',component:FoodComponent},
   {path:'cart',component:CartComponent},
   {path:'login',component:LoginComponent,canActivate:[LoginGuardService]},
+  {path:'register',component:RegisterComponent},
   { path: '**', component: ErrorComponent }, //should be always last route path
 ];
 
