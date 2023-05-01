@@ -9,21 +9,43 @@ import { USER_LOGIN } from '../shared/api/api';
   providedIn: 'root'
 })
 export class UserService {
-  private userSubject = new BehaviorSubject<User>(new User());
+  user_key = 'User';
+  user!: User;
+  private userSubject = new BehaviorSubject<User>(this.getUserFromLocalStorage());
   public userObservable:Observable<User>;
   constructor(private http:HttpClient) {
     this.userObservable = this.userSubject.asObservable();
+     //check if there is user or not
+    this.userObservable.subscribe( newuser => {
+      this.user = newuser;
+    })
   }
-  login(userLogin:UserLogin):Observable<User>{
+  login(userLogin:UserLogin):Observable<User> {
     return this.http.post<User>(USER_LOGIN, userLogin).pipe(
       tap({
-        next: (user) =>{
-
+        next: (user) => {
+          this.setUserToLocalStorage(user);
+          this.userSubject.next(user);
+          console.log(user.email + "logged in");
         },
         error: (errorResponse) => {
-
+          console.log(errorResponse);
         }
       })
     );
+  }
+  logout() {
+    this.userSubject.next(new User());
+    localStorage.removeItem(this.user_key);
+  }
+  // save user in local storage
+  private setUserToLocalStorage(user:User){
+    localStorage.setItem(this.user_key,JSON.stringify(user));
+  }
+  //get User from local storage
+  private getUserFromLocalStorage():User{
+    const userSaved = localStorage.getItem(this.user_key);
+    if(userSaved) return JSON.parse(userSaved) as User;
+    return new User();
   }
 }

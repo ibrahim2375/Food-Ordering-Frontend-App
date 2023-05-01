@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from 'src/app/services/cart.service';
+import { UserService } from 'src/app/services/user.service';
 import { Cart } from 'src/app/shared/models/Cart';
+import { User } from 'src/app/shared/models/User';
 
 @Component({
   selector: 'app-header',
@@ -9,12 +11,25 @@ import { Cart } from 'src/app/shared/models/Cart';
 })
 export class HeaderComponent implements OnInit {
   cart!:Cart;
-  constructor(private cartService:CartService) { }
-
-  ngOnInit(): void {
+  user!:User;
+  constructor(private cartService:CartService,private userService:UserService) {
     this.cartService.getCartObservable().subscribe(cart => {
-      this.cart = cart;
+    this.cart = cart;
     })
+    this.userService.userObservable.subscribe(newuser => {
+    this.user = newuser;
+    })
+  }
+  ngOnInit(): void {
+
+    // get user data from observable variable if exit
+    console.log(this.user.email)
+  }
+  logout() {
+    this.userService.logout();
+  }
+  get isLoggedIn() {
+    return  this.user.token;
   }
 
 }

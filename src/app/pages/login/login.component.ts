@@ -10,7 +10,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class LoginComponent implements OnInit {
   reactiveForm!: FormGroup;
-    returnUrl = '/';
+  returnUrl = '/foods';
   constructor(private userService: UserService,private activatedRoute:ActivatedRoute, private router:Router) { }
 
   ngOnInit(): void {
@@ -18,13 +18,13 @@ export class LoginComponent implements OnInit {
       email: new FormControl(null,[Validators.required, Validators.email]),
       password: new FormControl(null,[Validators.required]),
     })
-    // this.returnUrl = this.activatedRoute.snapshot.queryParams?.returnUrl;
+    // this.returnUrl = this.activatedRoute.snapshot.queryParams.returnUrl
   }
   onSubmit() {
   if(this.reactiveForm.invalid) return;
 
   this.userService.login({email:this.reactiveForm.get('email')?.value,password:this.reactiveForm.get('password')?.value}).subscribe(() => {
-        // this.router.navigateByUrl(this.returnUrl);
+        this.router.navigateByUrl(this.returnUrl);
   });
   }
 }
