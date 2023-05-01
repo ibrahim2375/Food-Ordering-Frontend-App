@@ -1,4 +1,4 @@
-<div class="login">
+<div class="form_page">
   <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
     <div class="form_input">
       <label for="email">Email</label>
@@ -50,6 +50,6 @@
       [disabled]="!reactiveForm.valid"
     />
     <!-- register  ling -->
-    <div>Are you a new user? <a class="register_link" routerLink="/register">Register</a></div>
+    <div>Are you a new user? <a class="form_link" routerLink="/register">Register</a></div>
   </form>
 </div>
