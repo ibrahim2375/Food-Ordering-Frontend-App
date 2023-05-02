@@ -55,4 +55,7 @@ getCartObservable(): Observable<Cart>{
   return this.cartSubject.asObservable();
 }
 
+getCart():Cart {
+  return this.cartSubject.value;
+}
 }

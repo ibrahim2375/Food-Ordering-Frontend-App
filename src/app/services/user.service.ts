@@ -69,4 +69,8 @@ export class UserService {
     if(userSaved) return JSON.parse(userSaved) as User;
     return new User();
   }
+  // get current user
+  getCurrentUser(): User {
+    return this.userSubject.value;
+  }
 }

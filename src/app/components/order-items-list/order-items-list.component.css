@@ -1,0 +1,50 @@
+table {
+  width: 100%;
+  border: 1px solid var(--first-color);
+  margin: 30px 0;
+  padding: 20px 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.table_title {
+  text-align: center;
+  background-color: var(--first-color);
+  color: var(--second-color);
+  padding: 10px 0;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.order_item_img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+tr td {
+  margin-right: 10px;
+}
+.total_price_title {
+  font-weight: bold;
+  color: var(--first-color);
+  text-align: center;
+}
+.total_price {
+  color: var(--second-color);
+  background-color: var(--price-color);
+  padding: 5px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}

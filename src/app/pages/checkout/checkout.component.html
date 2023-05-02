@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="checkout_page">
+    <div class="checkout_content">
+      <!-- order data of user and order items -->
+      <div class="order_data">
+        <h3>Order Data</h3>
+        <!-- user name -->
+        <p>Name: {{ currentUser.name }}</p>
+        <!-- user address -->
+        <p>Address: {{ currentUser.address }}</p>
+        <!-- items list -->
+        <app-order-items-list [order]="order"></app-order-items-list>
+      </div>
+      <!-- map to choose location -->
+      <app-map [order]="order"></app-map>
+    </div>
+    <!-- go to Payment -->
+    <div class="payment_btn">
+      <button class="create_order_btn" (click)="createOrder()">
+        Go To Payment
+      </button>
+    </div>
+  </div>
+</div>

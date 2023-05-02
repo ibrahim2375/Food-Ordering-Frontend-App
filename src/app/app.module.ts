@@ -19,6 +19,9 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
+import { CheckoutComponent } from './pages/checkout/checkout.component';
+import { OrderItemsListComponent } from './components/order-items-list/order-items-list.component';
+import { MapComponent } from './components/map/map.component';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -37,6 +40,9 @@ import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
     LoginComponent,
     RegisterComponent,
     LoadingComponent,
+    CheckoutComponent,
+    OrderItemsListComponent,
+    MapComponent,
 
   ],
   imports: [

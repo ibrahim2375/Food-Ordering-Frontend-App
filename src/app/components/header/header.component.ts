@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit {
     this.cartService.getCartObservable().subscribe(cart => {
     this.cart = cart;
     })
+
     this.userService.userObservable.subscribe(newuser => {
     this.user = newuser;
     })

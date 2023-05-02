@@ -26,8 +26,8 @@
           [value]="cartItem.quantity"
         >
           <option
-          *ngFor="let quntityOption of quntityOptions"
-          [value]="quntityOption"
+            *ngFor="let quntityOption of quntityOptions"
+            [value]="quntityOption"
           >
             {{ quntityOption }}
           </option>
@@ -48,7 +48,14 @@
           Total: {{ cart.totalPrice | currency }}
         </li>
       </ul>
-      <button class="checkout_btn">Checkout</button>
+      <!-- if user exist go to checkout -->
+      <button *ngIf="user.email" class="checkout_btn" routerLink="/checkout">
+        Checkout
+      </button>
+      <!-- if user not exist go to login -->
+      <button *ngIf="!user.email" class="checkout_btn" routerLink="/login">
+        Checkout
+      </button>
     </div>
   </div>
 </div>
