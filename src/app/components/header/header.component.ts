@@ -29,7 +29,7 @@ export class HeaderComponent implements OnInit {
     this.userService.logout();
   }
   get isLoggedIn() {
-    return  this.user.token;
+    return  this.user.email;
   }
 
 }

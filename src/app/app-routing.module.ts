@@ -18,7 +18,7 @@ const routes: Routes = [
   {path:'food/:id',component:FoodComponent},
   {path:'cart',component:CartComponent},
   {path:'login',component:LoginComponent,canActivate:[LoginGuardService]},
-  {path:'register',component:RegisterComponent},
+  {path:'register',component:RegisterComponent,canActivate:[LoginGuardService]},
   { path: '**', component: ErrorComponent }, //should be always last route path
 ];
 

@@ -27,6 +27,7 @@ export class UserService {
     return this.http.post<User>(USER_LOGIN, userLogin).pipe(
       tap({
         next: (user) => {
+          console.log(user.name);
           this.setUserToLocalStorage(user);
           this.userSubject.next(user);
           console.log(user + "logged in");

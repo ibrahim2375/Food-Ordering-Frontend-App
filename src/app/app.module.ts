@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule , HTTP_INTERCEPTORS } from '@angular/common/http'
 import { FormsModule , ReactiveFormsModule } from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +17,8 @@ import { NotFoundDataComponent } from './components/not-found-data/not-found-dat
 import { FoodsComponent } from './pages/foods/foods.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { LoadingComponent } from './components/loading/loading.component';
+import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -34,6 +36,7 @@ import { RegisterComponent } from './pages/register/register.component';
     FoodsComponent,
     LoginComponent,
     RegisterComponent,
+    LoadingComponent,
 
   ],
   imports: [
@@ -47,7 +50,9 @@ import { RegisterComponent } from './pages/register/register.component';
     ReactiveFormsModule,
 
   ],
-  providers: [],
+  providers: [
+    {provide:HTTP_INTERCEPTORS,useClass:LoadingInterceptor,multi:true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

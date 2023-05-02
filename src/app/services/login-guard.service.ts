@@ -9,7 +9,7 @@ export class LoginGuardService {
 
   constructor(private router: Router,private userServices:UserService) { }
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean  {
-    if(this.userServices.user.token){
+    if(this.userServices.user.email){
       this.router.navigate(['']);
       return false;
     } else {

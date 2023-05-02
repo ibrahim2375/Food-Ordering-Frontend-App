@@ -11,7 +11,7 @@ import { UserRegister } from 'src/app/shared/interfaces/UserRegister';
 })
 export class RegisterComponent implements OnInit {
   reactiveForm!: FormGroup;
-  returnUrl = '/login';
+  returnUrl = '/';
   errorsList = {
     usernameRequired:'Name Cannot Be Empty',
     usernameMinLength:'Username must be at least 4 character',
