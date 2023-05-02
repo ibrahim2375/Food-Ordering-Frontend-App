@@ -25,6 +25,8 @@ import { MapComponent } from './components/map/map.component';
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { MobileNavComponent } from './components/mobile-nav/mobile-nav.component';
 import { LandingComponent } from './components/landing/landing.component';
+import { TrendingSectionComponent } from './components/trending-section/trending-section.component';
+import { TrendingItemComponent } from './components/trending-item/trending-item.component';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -48,6 +50,8 @@ import { LandingComponent } from './components/landing/landing.component';
     MapComponent,
     MobileNavComponent,
     LandingComponent,
+    TrendingSectionComponent,
+    TrendingItemComponent,
 
   ],
   imports: [

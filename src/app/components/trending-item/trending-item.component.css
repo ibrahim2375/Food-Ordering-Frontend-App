@@ -1,0 +1,56 @@
+.trending_item_box {
+  position: relative;
+  box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.3);
+  padding: 20px 30px;
+  border-top-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+.trending_item_box .item_img {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+}
+.trending_item_box .item_img img {
+  object-fit: contain;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.trending_item_box .price {
+  color: var(--first-color);
+  font-weight: bold;
+}
+.trending_item_box p {
+  font-size: small;
+  color: var(--muted-text);
+}
+.trending_item_box .rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.trending_item_box .trending_item_btn {
+  background-color: var(--first-color);
+  height: 35px;
+  padding: 10px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  font-weight: bold;
+  color: var(--second-color);
+  cursor: pointer;
+  transform: translate3d(-40px, 20px, 0);
+  -webkit-transform: translate3d(-40px, 20px, 0);
+  -moz-transform: translate3d(-40px, 20px, 0);
+  -ms-transform: translate3d(-40px, 20px, 0);
+  -o-transform: translate3d(-40px, 20px, 0);
+}

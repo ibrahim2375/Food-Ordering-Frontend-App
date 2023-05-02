@@ -1,0 +1,21 @@
+<div class="trending_item_box">
+  <div class="item_img">
+    <img src="/assets/dish.webp" alt="trending_img" />
+  </div>
+  <span class="price">$12.00</span>
+  <h4>Chicken Soup</h4>
+  <p>Resturant Recomndation</p>
+  <div class="rating">
+    <p>4.3</p>
+    <star-rating
+      [value]="3"
+      [totalstars]="5"
+      checkedcolor="gold"
+      uncheckedcolor="black"
+      size="24px"
+      [readonly]="false"
+    >
+    </star-rating>
+  </div>
+  <button class="trending_item_btn">Order Now</button>
+</div>
