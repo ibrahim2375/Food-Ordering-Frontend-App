@@ -24,6 +24,7 @@ import { OrderItemsListComponent } from './components/order-items-list/order-ite
 import { MapComponent } from './components/map/map.component';
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { MobileNavComponent } from './components/mobile-nav/mobile-nav.component';
+import { LandingComponent } from './components/landing/landing.component';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -46,6 +47,7 @@ import { MobileNavComponent } from './components/mobile-nav/mobile-nav.component
     OrderItemsListComponent,
     MapComponent,
     MobileNavComponent,
+    LandingComponent,
 
   ],
   imports: [

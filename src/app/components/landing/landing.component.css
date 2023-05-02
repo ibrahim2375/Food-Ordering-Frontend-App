@@ -1,0 +1,90 @@
+/* foont */
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&display=swap");
+
+.landing {
+  height: calc(100vh - 74px);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 50px;
+}
+.landing .left {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  gap: 60px;
+}
+.landing .left .landing_title,
+.landing .left .landing_title .delivery_word {
+  font-family: "Caveat", cursive;
+  font-size: 4rem;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+.landing .left .landing_title .delivery_word {
+  color: var(--first-color);
+}
+.landing .left .description {
+  color: var(--muted-text);
+}
+.landing .left .btns {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.landing .left .btns .start_btn {
+  background-color: var(--first-color);
+  height: 50px;
+  padding: 10px 20px;
+  border-bottom-left-radius: 40px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  font-weight: bold;
+  color: var(--second-color);
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+}
+.landing .left .btns .start_btn:hover {
+  background-color: var(--home-bg);
+  color: var(--first-color);
+}
+.landing .left .btns .guide_btn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.landing .left .btns .guide_btn .guide_icon {
+  cursor: pointer;
+  border-left: 5px solid transparent;
+  border-top: 5px solid transparent;
+  border-right: 5px solid var(--first-color);
+  border-bottom: 5px solid var(--first-color);
+  background-color: var(--second-color);
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: all 0.5s ease-in;
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  -ms-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
+}
+.landing .left .btns .guide_btn .guide_icon:hover {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
+.landing .left .btns .guide_btn .guide_icon .play_icon {
+}
