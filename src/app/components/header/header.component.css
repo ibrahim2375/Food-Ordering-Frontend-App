@@ -74,6 +74,7 @@ nav .big_screen_menu_list .menu-container .menu .links span {
 nav .cart_content .cart {
   position: relative;
   padding: 10px;
+  cursor: pointer;
 }
 nav .cart_content .cart .cart_no {
   padding: 0;

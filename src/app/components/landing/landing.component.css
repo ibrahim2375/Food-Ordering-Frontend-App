@@ -68,6 +68,7 @@
   height: 50px;
   display: grid;
   place-items: center;
+  box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.4);
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -86,5 +87,33 @@
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
 }
-.landing .left .btns .guide_btn .guide_icon .play_icon {
+
+.right img {
+  object-fit: contain;
+  width: 100%;
+}
+/* mobile */
+@media (max-width: 1200px) {
+  .landing .left {
+    max-width: 350px;
+  }
+  .landing .left .landing_title,
+  .landing .left .landing_title .delivery_word {
+    font-size: 2.5rem;
+  }
+  .landing .left .description {
+    font-size: small;
+  }
+  .landing .left .btns .start_btn {
+    padding: 10px;
+    font-weight: normal;
+  }
+  .landing .left .btns .guide_btn p {
+    font-size: small;
+  }
+}
+@media (max-width: 768px) {
+  .landing {
+    flex-direction: column;
+  }
 }
