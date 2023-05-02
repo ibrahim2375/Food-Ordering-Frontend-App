@@ -3,6 +3,8 @@ import { CartService } from 'src/app/services/cart.service';
 import { UserService } from 'src/app/services/user.service';
 import { Cart } from 'src/app/shared/models/Cart';
 import { User } from 'src/app/shared/models/User';
+//icons 
+import {faShoppingBag , faList } from '@fortawesome/free-solid-svg-icons'
 
 @Component({
   selector: 'app-header',
@@ -12,6 +14,10 @@ import { User } from 'src/app/shared/models/User';
 export class HeaderComponent implements OnInit {
   cart!:Cart;
   user!:User;
+  //icons
+  faShoppingBag = faShoppingBag;
+  faList = faList;
+
   constructor(private cartService:CartService,private userService:UserService) {
     this.cartService.getCartObservable().subscribe(cart => {
     this.cart = cart;
@@ -22,10 +28,11 @@ export class HeaderComponent implements OnInit {
     })
   }
   ngOnInit(): void {
-
     // get user data from observable variable if exit
     console.log(this.user.email)
   }
+
+
   logout() {
     this.userService.logout();
   }

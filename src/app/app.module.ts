@@ -23,6 +23,7 @@ import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { OrderItemsListComponent } from './components/order-items-list/order-items-list.component';
 import { MapComponent } from './components/map/map.component';
 import { AuthInterceptor } from './auth/auth.interceptor';
+import { MobileNavComponent } from './components/mobile-nav/mobile-nav.component';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -44,6 +45,7 @@ import { AuthInterceptor } from './auth/auth.interceptor';
     CheckoutComponent,
     OrderItemsListComponent,
     MapComponent,
+    MobileNavComponent,
 
   ],
   imports: [

@@ -1,0 +1,40 @@
+<!-- mobile nav -->
+<!-- nav menu list -->
+<!-- main links -->
+<div class="mobile_nav">
+  <!-- menu icon for mobile -->
+  <div class="menu_list" (click)="changeNavState()">
+    <fa-icon [icon]="faList"></fa-icon>
+  </div>
+
+  <ul
+    class="mobile_menu_list"
+    [ngStyle]="{ display: navState ? 'flex' : 'none' }"
+  >
+    <li
+      routerLinkActive="active_link"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <span routerLink="/">Home</span>
+    </li>
+    <li
+      routerLinkActive="active_link"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <span routerLink="/foods">Foods</span>
+    </li>
+    <li *ngIf="!isLoggedIn" routerLinkActive="active_link">
+      <span routerLink="/login">login</span>
+    </li>
+    <li *ngIf="isLoggedIn" class="menu-container">
+      <span class="dashboard">{{ user.name }}</span>
+      <div class="menu">
+        <div class="links">
+          <span routerLink="/profile">Profile</span>
+          <span routerLink="/orders">Orders</span>
+          <span routerLink="/" (click)="logout()">Logout</span>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

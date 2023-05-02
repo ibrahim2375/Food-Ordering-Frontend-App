@@ -29,8 +29,8 @@
 }
 
 /* general classes */
-.active_link a{
-  background-color: var(--first-color);
+.active_link span {
+  color: var(--first-color);
 }
 .container {
   margin: 0 auto;

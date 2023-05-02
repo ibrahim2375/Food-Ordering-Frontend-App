@@ -1,43 +1,55 @@
 <header>
   <div class="container">
     <nav>
-      <a routerLink="/" class="logo">
-        <img src="/assets/logo.png" alt="logo" />
-      </a>
-      <ul>
-        <li
-          routerLinkActive="active_link"
-          [routerLinkActiveOptions]="{ exact: true }"
-        >
-          <a routerLink="/">Home</a>
-        </li>
-        <li
-          routerLinkActive="active_link"
-          [routerLinkActiveOptions]="{ exact: true }"
-        >
-          <a routerLink="/foods">Foods</a>
-        </li>
-        <li *ngIf="!isLoggedIn" routerLinkActive="active_link">
-          <a routerLink="/login">login</a>
-        </li>
-        <li *ngIf="isLoggedIn" class="menu-container">
-          <a  routerLink="/dashboard" class="dashboard">{{
-            user.name
-          }}</a>
-          <div class="menu">
-            <div class="links">
-              <a routerLink="/profile">Profile</a>
-              <a routerLink="/orders">Orders</a>
-              <a routerLink="/" (click)="logout()">Logout</a>
+      <!-- left side -------------------------------------------------------------------------->
+      <div class="left_side">
+        <!-- app icon  -->
+        <a routerLink="/" class="logo">
+          <img src="/assets/logo.png" alt="logo" />
+        </a>
+      </div>
+      <!-- right side-------------------------------------------------------------------------->
+      <div class="right_side">
+        <!-- nav menu list -->
+        <ul class="big_screen_menu_list">
+          <li
+            routerLinkActive="active_link"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            <span routerLink="/">Home</span>
+          </li>
+          <li
+            routerLinkActive="active_link"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            <span routerLink="/foods">Foods</span>
+          </li>
+          <li *ngIf="!isLoggedIn" routerLinkActive="active_link">
+            <span routerLink="/login">login</span>
+          </li>
+          <li *ngIf="isLoggedIn" class="menu-container">
+            <span class="dashboard">{{
+              user.name
+            }}</span>
+            <div class="menu">
+              <div class="links">
+                <span routerLink="/profile">Profile</span>
+                <span routerLink="/orders">Orders</span>
+                <span routerLink="/" (click)="logout()">Logout</span>
+              </div>
             </div>
-          </div>
-        </li>
-        <li routerLinkActive="active_link">
-          <a routerLink="/cart" class="cart">
-            Cart <span class="cart_no">{{ cart.items.length }}</span>
-          </a>
-        </li>
-      </ul>
+          </li>
+        </ul>
+        <!-- mobile menu list -->
+        <app-mobile-nav [user]="user" [isLoggedIn]="isLoggedIn"></app-mobile-nav>
+        <!-- cart -->
+        <div routerLinkActive="active_link" class="cart_content">
+          <span routerLink="/cart" class="cart">
+            <fa-icon [icon]="faShoppingBag"></fa-icon>
+            <span class="cart_no">{{ cart.items.length }}</span>
+          </span>
+        </div>
+      </div>
     </nav>
   </div>
 </header>
