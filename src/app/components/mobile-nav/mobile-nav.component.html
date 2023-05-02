@@ -6,7 +6,6 @@
   <div class="menu_list" (click)="changeNavState()">
     <fa-icon [icon]="faList"></fa-icon>
   </div>
-
   <ul
     class="mobile_menu_list"
     [ngStyle]="{ display: navState ? 'flex' : 'none' }"
@@ -38,3 +37,9 @@
     </li>
   </ul>
 </div>
+<!-- cover to dark the page -->
+<div
+  [ngStyle]="{ display: navState ? 'block' : 'none' }"
+  class="cover"
+  (click)="changeNavState()"
+></div>

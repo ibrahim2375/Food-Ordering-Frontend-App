@@ -31,7 +31,8 @@ export class MobileNavComponent implements OnInit {
   changeNavState(){
     this.navState = !this.navState;
   }
-   logout() {
+  logout() {
     this.userService.logout();
   }
+
 }

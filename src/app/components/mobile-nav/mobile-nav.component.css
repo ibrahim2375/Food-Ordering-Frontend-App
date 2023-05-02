@@ -1,6 +1,7 @@
 /* mobile */
 .mobile_nav {
   position: relative;
+  z-index: 999999;
 }
 /* menu */
 .menu_list {
@@ -12,6 +13,7 @@
 .mobile_menu_list {
   display: none;
   position: absolute;
+  z-index: 99999;
   top: 100%;
   right: 0;
   flex-direction: column;
@@ -63,6 +65,17 @@
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+}
+/* cover */
+.cover {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 @media (max-width: 768px) {
   /* menu */
