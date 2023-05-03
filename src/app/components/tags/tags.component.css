@@ -1,9 +1,10 @@
 .tags {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   gap: 30px;
   margin: 20px 0;
+  padding: 20px;
   overflow-x: scroll;
 }
 .tags .tag {

@@ -27,6 +27,7 @@ import { MobileNavComponent } from './components/mobile-nav/mobile-nav.component
 import { LandingComponent } from './components/landing/landing.component';
 import { TrendingSectionComponent } from './components/trending-section/trending-section.component';
 import { TrendingItemComponent } from './components/trending-item/trending-item.component';
+import { NewestSectionComponent } from './components/newest-section/newest-section.component';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -52,6 +53,7 @@ import { TrendingItemComponent } from './components/trending-item/trending-item.
     LandingComponent,
     TrendingSectionComponent,
     TrendingItemComponent,
+    NewestSectionComponent,
 
   ],
   imports: [
