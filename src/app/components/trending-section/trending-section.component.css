@@ -1,14 +1,14 @@
 .trending_section {
-  height: 100vh;
-  /* display: grid;
-  place-items: center; */
+  /* height: 100vh; */
+  margin-top: 5rem;
 }
 section {
-  padding: 50px 30px;
+  padding: 50px 0px;
   width: 100%;
   background-color: var(--second-color);
 }
 section .section_head {
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,9 +26,27 @@ section .section_head .view_all_link {
   font-weight: bold;
 }
 section .trending_items {
-  padding: 60px;
+  user-select: none;
+  padding: 60px 40px;
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 70px;
   overflow-x: scroll;
+  overflow-y: hidden;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  section .section_head .trending_title {
+    font-size: 1rem;
+    word-spacing: 1px;
+    font-weight: normal;
+  }
+  section .section_head .view_all_link {
+    color: var(--first-color);
+    font-weight: bold;
+  }
+  section .trending_items {
+    padding: 60px 40px;
+    gap: 50px;
+  }
 }

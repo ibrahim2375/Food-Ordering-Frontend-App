@@ -1,11 +1,10 @@
 <div class="trending_section">
-  <div class="container">
     <section>
       <div class="section_head">
         <h1 class="trending_title">Trending Recipes.</h1>
         <a routerLink="/foods" class="view_all_link">View All</a>
       </div>
-      <div class="trending_items">
+      <div #items class="trending_items row">
         <app-trending-item></app-trending-item>
         <app-trending-item></app-trending-item>
         <app-trending-item></app-trending-item>
@@ -17,5 +16,4 @@
         <app-trending-item></app-trending-item>
       </div>
     </section>
-  </div>
 </div>

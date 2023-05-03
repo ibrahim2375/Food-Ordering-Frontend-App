@@ -7,15 +7,15 @@
   --first-color: coral;
   --second-color: white;
   --third-color: #666;
-  --home-bg:#f7f5f3;
-  --muted-text:#999;
+  --home-bg: #f7f5f3;
+  --muted-text: #999;
   --orgins-bg: #eeeded;
   --origin-color: #ccc;
   --font-color: black;
   --search-border: #c0c0c0;
   --tags-bg: #eeeded;
   --price-color: rgb(51, 201, 51);
-  --input-border:#999;
+  --input-border: #999;
 }
 
 * {
@@ -109,4 +109,8 @@ form input[type="submit"]:hover {
 form .form_link {
   color: var(--first-color);
   font-weight: bold;
+}
+/* scroll row section */
+.row::-webkit-scrollbar {
+  display: none;
 }
