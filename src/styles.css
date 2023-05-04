@@ -125,3 +125,38 @@ form .form_link {
 .row {
   scroll-behavior: smooth;
 }
+/* arrows icons */
+
+.left_arrow,
+.right_arrow {
+  position: absolute;
+  z-index: 99;
+  height: 70%;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: -7px 15px 57px 34px rgba(0, 0, 0, 0.5),
+  11px -12px 39px 0px rgba(0, 0, 0, 0.5) ; */
+}
+.left_arrow {
+  left: 0;
+}
+.right_arrow {
+  right: 0;
+}
+.left_arrow .left_arrow_icon,
+.right_arrow .right_arrow_icon {
+  cursor: pointer;
+  background-color: var(--second-color);
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}

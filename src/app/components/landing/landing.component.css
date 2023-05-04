@@ -27,7 +27,7 @@
 .landing .left .btns {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
 }
 .landing .left .btns .start_btn {
   background-color: var(--first-color);
@@ -112,6 +112,9 @@
 @media (max-width: 768px) {
   .landing {
     flex-direction: column;
+  }
+  .landing .left {
+    width: 100%;
   }
   .landing .left .btns .guide_btn .guide_icon {
     width: 40px;

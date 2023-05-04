@@ -19,8 +19,13 @@ section .newest_head .newest_title {
   word-spacing: 3px;
   font-weight: 300;
 }
-
-section .newest_items {
+.section_content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.newest_items {
   user-select: none;
   padding: 60px 40px;
   display: flex;
@@ -38,7 +43,7 @@ section .newest_items {
     font-weight: normal;
   }
 
-  section .newest_items {
+  .newest_items {
     padding: 60px 40px;
     gap: 50px;
   }

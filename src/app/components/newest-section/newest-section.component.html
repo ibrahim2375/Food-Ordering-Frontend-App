@@ -4,6 +4,12 @@
       <h1 class="newest_title">Newest Recipes</h1>
       <a routerLink="/newest" class="view_all_link">View All</a>
     </div>
+    <div class="section_content">
+      <!-- scroll arrows  -->
+      <!-- scroll left arrow -->
+      <div class="left_arrow">
+        <fa-icon class="left_arrow_icon" [icon]="faArrowLeft" (click)="scroll_left()"></fa-icon>
+      </div>
     <div #items class="newest_items row">
       <app-newest-item></app-newest-item>
       <app-newest-item></app-newest-item>
@@ -23,6 +29,11 @@
       <app-newest-item></app-newest-item>
       <app-newest-item></app-newest-item>
       <app-newest-item></app-newest-item>
+    </div>
+     <!-- scroll right arrow -->
+      <div class="right_arrow">
+        <fa-icon class="right_arrow_icon" [icon]="faArrowRight" (click)="scroll_right()"></fa-icon>
+      </div>
     </div>
   </section>
 </div>

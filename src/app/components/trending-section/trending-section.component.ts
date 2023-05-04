@@ -22,10 +22,10 @@ export class TrendingSectionComponent implements OnInit {
     ScrollByMouse(this.elementRef);
   }
 
-scroll_left = () => {
-  scroll_to_left(this.elementRef);
-}
-scroll_right = () => {
-  scroll_to_right(this.elementRef);
-}
+  scroll_left = () => {
+    scroll_to_left(this.elementRef);
+  }
+  scroll_right = () => {
+    scroll_to_right(this.elementRef);
+  }
 }
