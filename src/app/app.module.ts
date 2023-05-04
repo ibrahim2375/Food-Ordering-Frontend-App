@@ -31,6 +31,7 @@ import { NewestSectionComponent } from './components/newest-section/newest-secti
 import { NewestItemComponent } from './components/newest-item/newest-item.component';
 import { CravingSectionComponent } from './components/craving-section/craving-section.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { FoodItemComponent } from './components/food-item/food-item.component';
 
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -61,6 +62,7 @@ import { FooterComponent } from './components/footer/footer.component';
     NewestItemComponent,
     CravingSectionComponent,
     FooterComponent,
+    FoodItemComponent,
 
   ],
   imports: [

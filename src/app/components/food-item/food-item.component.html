@@ -1,0 +1,44 @@
+<!-- single food -->
+<a routerLink="/food/{{ food.id }}" class="food">
+  <img class="food_img" src="{{ food.imageUrl }}" alt="{{ food.name }}" />
+  <div class="food_content">
+    <div class="food_head">
+      <h5 class="food_name">{{ food.name }}</h5>
+      <span class="{{ food.favorite ? 'favorite' : 'not_favorite ' }}">
+        <fa-icon [icon]="faHeart"></fa-icon>
+      </span>
+    </div>
+    <div class="stars">
+      <star-rating
+        [value]="5"
+        [totalstars]="5"
+        checkedcolor="red"
+        uncheckedcolor="black"
+        size="24px"
+        [readonly]="false"
+      >
+      </star-rating>
+    </div>
+    <div class="product_footer">
+      <div>
+        <div class="origins">
+          <div *ngFor="let origin of food.origins">
+            <span>{{ origin }}</span>
+          </div>
+        </div>
+        <span class="cook_time">
+          <fa-icon [icon]="faClock"></fa-icon>
+          {{ food.cookTime }}</span
+        >
+      </div>
+      <div class="foot">
+        <span class="price">{{ food.price | currency }}</span>
+        <span class="views">
+          <fa-icon [icon]="faEye"></fa-icon>
+          {{ food.views }}
+        </span>
+      </div>
+    </div>
+  </div>
+</a>
+<!-- single food -->
