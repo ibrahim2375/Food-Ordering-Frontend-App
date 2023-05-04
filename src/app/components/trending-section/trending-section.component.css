@@ -21,10 +21,6 @@ section .section_head .trending_title {
   word-spacing: 3px;
   font-weight: 300;
 }
-section .section_head .view_all_link {
-  color: var(--first-color);
-  font-weight: bold;
-}
 section .trending_items {
   user-select: none;
   padding: 60px 40px;
@@ -41,10 +37,7 @@ section .trending_items {
     word-spacing: 1px;
     font-weight: normal;
   }
-  section .section_head .view_all_link {
-    color: var(--first-color);
-    font-weight: bold;
-  }
+
   section .trending_items {
     padding: 60px 40px;
     gap: 50px;

@@ -1,0 +1,45 @@
+.newest_section {
+  margin-top: 5rem;
+}
+section {
+  padding: 50px 0px;
+  width: 100%;
+}
+section .newest_head {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+section .newest_head .newest_title {
+  font-family: "Pacifico", cursive;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  word-spacing: 3px;
+  font-weight: 300;
+}
+
+section .newest_items {
+  user-select: none;
+  padding: 60px 40px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  cursor: pointer;
+  /* box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5) inset; */
+}
+@media (max-width: 768px) {
+  section .newest_head .newest_title {
+    font-size: 1rem;
+    word-spacing: 1px;
+    font-weight: normal;
+  }
+
+  section .newest_items {
+    padding: 60px 40px;
+    gap: 50px;
+  }
+}

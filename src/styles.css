@@ -46,6 +46,10 @@
 .not_favorite {
   color: var(--third-color);
 }
+.view_all_link {
+  color: var(--first-color);
+  font-weight: bold;
+}
 /* forms */
 input.ng-invalid.ng-touched {
   border: red 1px solid;

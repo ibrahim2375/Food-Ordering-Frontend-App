@@ -28,6 +28,7 @@ import { LandingComponent } from './components/landing/landing.component';
 import { TrendingSectionComponent } from './components/trending-section/trending-section.component';
 import { TrendingItemComponent } from './components/trending-item/trending-item.component';
 import { NewestSectionComponent } from './components/newest-section/newest-section.component';
+import { NewestItemComponent } from './components/newest-item/newest-item.component';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -54,6 +55,7 @@ import { NewestSectionComponent } from './components/newest-section/newest-secti
     TrendingSectionComponent,
     TrendingItemComponent,
     NewestSectionComponent,
+    NewestItemComponent,
 
   ],
   imports: [
