@@ -32,6 +32,10 @@
   font-family: "Roboto Mono", monospace;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* general classes */
 .active_link span {
   color: var(--first-color);
@@ -117,4 +121,7 @@ form .form_link {
 /* scroll row section */
 .row::-webkit-scrollbar {
   display: none;
+}
+.row {
+  scroll-behavior: smooth;
 }
