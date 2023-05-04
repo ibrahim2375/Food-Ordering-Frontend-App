@@ -1,29 +1,32 @@
 import { ElementRef } from "@angular/core";
-
-export const ScrollByMouse = (element:ElementRef, startPoint:number, scrollLeft:number, isMouseDown:Boolean) => {
-    element.nativeElement.addEventListener('mousedown', () => {
-        isMouseDown = true;
+  //scroll var
+  var  scrollLeft = 0;
+  var startX=0;
+  var  isDown = false;
+export const ScrollByMouse = (elementRef:ElementRef) => {
+elementRef.nativeElement.addEventListener('mousedown', (e:any) => {
+        isDown = true;
         //get start point in page
-        startPoint = element.nativeElement.pageX - element.nativeElement.offsetLeft;
-        scrollLeft = element.nativeElement.scrollLeft;
+        startX = e.pageX - elementRef.nativeElement.offsetLeft;
+        scrollLeft = elementRef.nativeElement.scrollLeft;
     })
-    element.nativeElement.addEventListener("mouseleave", () => {
-        isMouseDown = false;
+    elementRef.nativeElement.addEventListener("mouseleave", () => {
+        isDown = false;
     });
-    element.nativeElement.addEventListener("mouseup", () => {
-        isMouseDown = false;
+    elementRef.nativeElement.addEventListener("mouseup", () => {
+        isDown = false;
     });
-    element.nativeElement.addEventListener("mousemove", () => {
+    elementRef.nativeElement.addEventListener("mousemove", (e:any) => {
         //check if its down
-        if (!isMouseDown) return;
+        if (!isDown) return;
         // e.preventDefault();
-        if (isMouseDown) {
+        if (isDown) {
             //calculate cursor position
-            let currentX = element.nativeElement.pageX - element.nativeElement.offsetLeft;
+            let currentX = e.pageX - elementRef.nativeElement.offsetLeft;
             //minse from the start point
-            let moved = currentX - startPoint;
+            let moved = currentX - startX;
             //assign moved value to scroll left
-            element.nativeElement.scrollLeft = scrollLeft - moved;
+            elementRef.nativeElement.scrollLeft = scrollLeft - moved;
         }
     });
 }
