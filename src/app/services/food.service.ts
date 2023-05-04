@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Food } from '../shared/models/Food';
 import { Tag } from '../shared/models/Tag';
-import { FOODS_API, FOODS_BY_ID, FOOD_TAGS } from '../shared/api/api';
+import { FOODS_API, FOODS_BY_ID, FOODS_LATEST, FOODS_MOST_VIEWS, FOOD_TAGS } from '../shared/api/api';
 import { FOODS_BY_SEARCH } from '../shared/api/api';
 import { FOODS_BY_TAG } from '../shared/api/api';
 // import { sample_foods, sample_tags } from 'src/data';
@@ -30,5 +30,11 @@ export class FoodService {
   }
   getFoodById(id:string):Observable<Food> {
     return this.http.get<Food>(FOODS_BY_ID + id) ;
+  }
+  getMostViewedFood():Observable<Food[]> {
+    return this.http.get<Food[]>(FOODS_MOST_VIEWS) ;
+  }
+  getLatestFood():Observable<Food[]> {
+    return this.http.get<Food[]>(FOODS_LATEST) ;
   }
 }

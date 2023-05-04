@@ -7,7 +7,7 @@
   <!-- food data -->
   <div *ngIf="food" class="food">
     <div class="food_img">
-      <img src="{{ food.imageUrl }}" alt="{{ food.name }}" />
+      <img src="{{ image_src + food.imageUrl }}" alt="{{ food.name }}" />
     </div>
     <div class="details">
       <div class="food_header">

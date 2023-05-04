@@ -1,6 +1,10 @@
 <!-- single food -->
 <a routerLink="/food/{{ food.id }}" class="food">
-  <img class="food_img" src="{{ food.imageUrl }}" alt="{{ food.name }}" />
+  <img
+    class="food_img"
+    src="{{ image_src + food.imageUrl }}"
+    alt="{{ food.name }}"
+  />
   <div class="food_content">
     <div class="food_head">
       <h5 class="food_name">{{ food.name }}</h5>

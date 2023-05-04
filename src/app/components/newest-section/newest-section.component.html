@@ -11,24 +11,7 @@
         <fa-icon class="left_arrow_icon" [icon]="faArrowLeft" (click)="scroll_left()"></fa-icon>
       </div>
     <div #items class="newest_items row">
-      <app-newest-item></app-newest-item>
-      <app-newest-item></app-newest-item>
-      <app-newest-item></app-newest-item>
-      <app-newest-item></app-newest-item>
-      <app-newest-item></app-newest-item>
-      <app-newest-item></app-newest-item>
-      <app-newest-item></app-newest-item>
-      <app-newest-item></app-newest-item>
-      <app-newest-item></app-newest-item>
-      <app-newest-item></app-newest-item>
-      <app-newest-item></app-newest-item>
-      <app-newest-item></app-newest-item>
-      <app-newest-item></app-newest-item>
-      <app-newest-item></app-newest-item>
-      <app-newest-item></app-newest-item>
-      <app-newest-item></app-newest-item>
-      <app-newest-item></app-newest-item>
-      <app-newest-item></app-newest-item>
+      <app-newest-item  [food]="food" *ngFor="let food of latestFood"></app-newest-item>
     </div>
      <!-- scroll right arrow -->
       <div class="right_arrow">

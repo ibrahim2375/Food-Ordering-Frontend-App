@@ -16,7 +16,7 @@
   right: -40px;
 }
 .trending_item_box .item_img img {
-  object-fit: contain;
+  object-fit: cover;
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -40,17 +40,26 @@
 }
 .trending_item_box .trending_item_btn {
   background-color: var(--first-color);
+  color: var(--second-color);
   height: 35px;
   padding: 10px;
   border-top-left-radius: 30px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   font-weight: bold;
-  color: var(--second-color);
   cursor: pointer;
   transform: translate3d(-40px, 20px, 0);
   -webkit-transform: translate3d(-40px, 20px, 0);
   -moz-transform: translate3d(-40px, 20px, 0);
   -ms-transform: translate3d(-40px, 20px, 0);
   -o-transform: translate3d(-40px, 20px, 0);
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+.trending_item_box .trending_item_btn:hover {
+  background-color: var(--second-color);
+  color: var(--first-color);
 }

@@ -5,6 +5,7 @@ import { Food } from 'src/app/shared/models/Food';
 //icons
 import { faHeart,faClock } from '@fortawesome/free-solid-svg-icons';
 import { CartService } from 'src/app/services/cart.service';
+import { IMAGE_SRC } from 'src/app/shared/api/api';
 @Component({
   selector: 'app-food',
   templateUrl: './food.component.html',
@@ -13,9 +14,13 @@ import { CartService } from 'src/app/services/cart.service';
 export class FoodComponent implements OnInit {
   faHeart = faHeart
   food!:Food;
+  //image src...
+  image_src = '';
   constructor(private activateRoute: ActivatedRoute,private foodService:FoodService,private router:Router,private cartService:CartService) { }
 
   ngOnInit(): void {
+     //image src api
+    this.image_src = IMAGE_SRC;
     this.activateRoute.params.subscribe((param) => {
       if(param['id']){
         this.foodService.getFoodById(param['id']).subscribe(data => {

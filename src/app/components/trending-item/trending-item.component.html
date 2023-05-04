@@ -1,14 +1,14 @@
 <div class="trending_item_box">
   <div class="item_img">
-    <img src="/assets/dish.webp" alt="trending_img" />
+    <img src="{{ image_src + food.imageUrl }}" alt="trending_img" />
   </div>
-  <span class="price">$12.00</span>
-  <h4>Chicken Soup</h4>
+  <span class="price">{{ food.price | currency }}</span>
+  <h4>{{ food.name }}</h4>
   <p>Resturant Recomndation</p>
   <div class="rating">
-    <p>4.3</p>
+    <p>{{ food.stars }}</p>
     <star-rating
-      [value]="3"
+      [value]="food.stars"
       [totalstars]="5"
       checkedcolor="gold"
       uncheckedcolor="black"
@@ -17,5 +17,7 @@
     >
     </star-rating>
   </div>
-  <button class="trending_item_btn">Order Now</button>
+  <button class="trending_item_btn" routerLink="/food/{{ food.id }}">
+    Order Now
+  </button>
 </div>

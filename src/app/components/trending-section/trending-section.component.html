@@ -10,20 +10,9 @@
       <div class="left_arrow">
         <fa-icon class="left_arrow_icon" [icon]="faArrowLeft" (click)="scroll_left()"></fa-icon>
       </div>
-      <div #items class="trending_items row">
+      <div #items class="trending_items row"  >
         <!-- items -->
-        <app-trending-item></app-trending-item>
-        <app-trending-item></app-trending-item>
-        <app-trending-item></app-trending-item>
-        <app-trending-item></app-trending-item>
-        <app-trending-item></app-trending-item>
-        <app-trending-item></app-trending-item>
-        <app-trending-item></app-trending-item>
-        <app-trending-item></app-trending-item>
-        <app-trending-item></app-trending-item>
-        <app-trending-item></app-trending-item>
-        <app-trending-item></app-trending-item>
-        <app-trending-item></app-trending-item>
+        <app-trending-item [food]="food" *ngFor="let food of mostViewedFood"></app-trending-item>
       </div>
       <!-- scroll right arrow -->
       <div class="right_arrow">
