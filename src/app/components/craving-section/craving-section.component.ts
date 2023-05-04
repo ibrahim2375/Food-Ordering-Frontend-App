@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { sample_craving_food } from 'src/data';
 
 @Component({
   selector: 'app-craving-section',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./craving-section.component.css']
 })
 export class CravingSectionComponent implements OnInit {
-
+  cravingItems!:any;
   constructor() { }
 
   ngOnInit(): void {
+    this.cravingItems = sample_craving_food;
   }
 
 }
