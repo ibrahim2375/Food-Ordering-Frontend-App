@@ -16,10 +16,6 @@ nav {
   align-items: center;
   gap: 20px;
 }
-nav .logo img {
-  object-fit: contain;
-  height: 30px;
-}
 
 nav .big_screen_menu_list {
   display: flex;
