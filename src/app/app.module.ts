@@ -29,6 +29,8 @@ import { TrendingSectionComponent } from './components/trending-section/trending
 import { TrendingItemComponent } from './components/trending-item/trending-item.component';
 import { NewestSectionComponent } from './components/newest-section/newest-section.component';
 import { NewestItemComponent } from './components/newest-item/newest-item.component';
+import { CravingSectionComponent } from './components/craving-section/craving-section.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -57,6 +59,8 @@ import { NewestItemComponent } from './components/newest-item/newest-item.compon
     TrendingItemComponent,
     NewestSectionComponent,
     NewestItemComponent,
+    CravingSectionComponent,
+    FooterComponent,
 
   ],
   imports: [
