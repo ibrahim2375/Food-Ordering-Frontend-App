@@ -1,0 +1,37 @@
+footer {
+  background-color: var(--footer-bg);
+  padding: 50px 30px;
+  color: var(--second-color);
+  font-family: "Raleway", sans-serif;
+}
+.footer_content {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  /* align-items: center; */
+  gap: 3rem;
+}
+.footer_content ul li {
+  margin-bottom: 10px;
+}
+.footer_content ul .scoial_media_links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer_content ul .scoial_media_links img {
+  width: 20px;
+  height: 20px;
+}
+.footer_content ul .title {
+  font-weight: bold;
+  font-size: large;
+}
+@media (max-width: 768px) {
+  .footer_content {
+    flex-direction: column;
+    justify-content: space-around;
+    /* align-items: center; */
+    gap: 3rem;
+  }
+}

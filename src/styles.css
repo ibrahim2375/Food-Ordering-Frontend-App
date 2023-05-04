@@ -8,6 +8,7 @@
   --second-color: white;
   --third-color: #666;
   --home-bg: #f7f5f3;
+  --footer-bg:#151515;
   --muted-text: #999;
   --orgins-bg: #eeeded;
   --origin-color: #ccc;
@@ -37,6 +38,10 @@ html {
 }
 
 /* general classes */
+.logo img {
+  object-fit: contain;
+  height: 30px;
+}
 .active_link span {
   color: var(--first-color);
 }
