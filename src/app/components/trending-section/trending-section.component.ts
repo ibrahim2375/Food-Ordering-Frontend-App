@@ -1,49 +1,31 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-//global variables form scroll by mouse
-
+//icons
+import {faArrowLeft , faArrowRight  } from '@fortawesome/free-solid-svg-icons';
+import { scroll_to_left, scroll_to_right } from 'src/app/functions/scroll';
+import { ScrollByMouse } from 'src/app/functions/scrollByMouse';
 @Component({
   selector: 'app-trending-section',
   templateUrl: './trending-section.component.html',
   styleUrls: ['./trending-section.component.css']
 })
 export class TrendingSectionComponent implements OnInit {
-  scrollLeft = 0;
-  startX=0;
-  isDown = false;
+    //icons
+  faArrowLeft = faArrowLeft;
+  faArrowRight = faArrowRight
   @ViewChild('items',{static:true}) elementRef!:ElementRef;
-  constructor() { 
-  
+
+  constructor() {
+
   }
 
   ngOnInit(): void {
-    this.ScrollByMouse();
+    ScrollByMouse(this.elementRef);
   }
 
-ScrollByMouse = () => {
-    this.elementRef.nativeElement.addEventListener('mousedown', (e:any) => {
-        this.isDown = true;
-        //get start point in page
-        this.startX = e.pageX - this.elementRef.nativeElement.offsetLeft;
-        this.scrollLeft = this.elementRef.nativeElement.scrollLeft;
-    })
-    this.elementRef.nativeElement.addEventListener("mouseleave", () => {
-        this.isDown = false;
-    });
-    this.elementRef.nativeElement.addEventListener("mouseup", () => {
-        this.isDown = false;
-    });
-    this.elementRef.nativeElement.addEventListener("mousemove", (e:any) => {
-        //check if its down
-        if (!this.isDown) return;
-        // e.preventDefault();
-        if (this.isDown) {
-            //calculate cursor position
-            let currentX = e.pageX - this.elementRef.nativeElement.offsetLeft;
-            //minse from the start point
-            let moved = currentX - this.startX;
-            //assign moved value to scroll left
-            this.elementRef.nativeElement.scrollLeft = this.scrollLeft - moved;
-        }
-    });
+scroll_left = () => {
+  scroll_to_left(this.elementRef);
+}
+scroll_right = () => {
+  scroll_to_right(this.elementRef);
 }
 }
