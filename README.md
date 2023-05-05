@@ -3,7 +3,7 @@
 
 ## Start Project 
 ```bash
-- npm instll
+- npm install
 - ng serve
 ```
 ## Backend App Link:
