@@ -13,7 +13,7 @@
         <a routerLink="/food/{{ cartItem.food.id }}" class="cart_item_data">
           <!-- item image -->
           <img
-            src="{{ cartItem.food.imageUrl }}"
+            src="{{ image_src + cartItem.food.imageUrl }}"
             alt="{{ cartItem.food.name }}"
           />
           <!-- name of food -->

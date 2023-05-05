@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { CartService } from 'src/app/services/cart.service';
 import { OrderService } from 'src/app/services/order.service';
 import { UserService } from 'src/app/services/user.service';
+import { IMAGE_SRC } from 'src/app/shared/api/api';
 import { Order } from 'src/app/shared/models/Order';
 import { User } from 'src/app/shared/models/User';
 

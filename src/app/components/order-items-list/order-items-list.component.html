@@ -11,7 +11,7 @@
         <a routerLink="/food/{{ item.food.id }}">
           <img
             class="order_item_img"
-            src="{{ item.food.imageUrl }}"
+            src="{{ image_src + item.food.imageUrl }}"
             alt="{{ item.food.name }}"
           />
         </a>
