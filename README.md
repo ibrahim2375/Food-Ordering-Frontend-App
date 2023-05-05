@@ -4,6 +4,7 @@
 ## Start Project 
 ```bash
 - npm install
+- npm install -g @angular/cli
 - ng serve
 ```
 ## Backend App Link:
